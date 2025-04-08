@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Hero from './components/Hero/Hero'
+import Testmonials from './components/Testmonials/Testmonials'
+import Team from './components/Team/Team'
+import "./App.css"
 
-export default class App extends Component {
-    constructor(){
-      super();
-    }
-
-    render() {
-      return (
-        <div>
-          <h1>React App</h1>
-        </div>
-      )
-    }
+export default function App() {
+  return (
+    <div className='mainCon'>
+        <Hero />
+        <Testmonials />
+        <Team />
+    </div>
+  )
 }
