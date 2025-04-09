@@ -17,6 +17,8 @@ const navigation = [
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const [navigationData, setNavigationData]= useState(navigation)
+
   return (
     <div>
       <header className="absolute inset-x-0 top-0 z-50">
@@ -42,12 +44,12 @@ export default function Hero() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
+            {navigationData.map((item) => (
               <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
                 {item.name}
               </a>
             ))}
-               <SearchBar />
+               <SearchBar placeHolder='Search for Products'/>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm/6 font-semibold text-gray-900">

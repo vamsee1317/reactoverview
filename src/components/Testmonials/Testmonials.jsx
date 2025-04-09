@@ -35,7 +35,7 @@ export default function Testmonials() {
           </figure>
         </div>
         <div className="flex justify-center mt-5">
-            <SearchBar />
+            <SearchBar placeHolder="search for testmonials"/>
         </div>
       </section>
     )
